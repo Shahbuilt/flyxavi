@@ -82,23 +82,23 @@ WSGI_APPLICATION = 'flyxavi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-     }
- }
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME':'postgres',
-#         'USER': 'postgres',
-#         "PASSWORD": '8yw4w786',
-#         "HOST": 'localhost',
-#         "PORT": '5432',
-#     }
-# }
+#      'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#      }
+#  }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'d9h26vi8n8j36t',
+        'USER': 'ruuyvlplmrdbit',
+        "PASSWORD": 'f994b136549dec772904fcd886b2235649a289750c17e7dfd18d9873ecaf4642',
+        "HOST": 'ec2-34-232-252-124.compute-1.amazonaws.com',
+        "PORT": '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
