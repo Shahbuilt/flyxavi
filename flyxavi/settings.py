@@ -20,7 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
+SECRET_KEY = 'u@iccaym1=_j#=i624se5-h@!(-8a3&)-5u#&c#u-+&8=fa1q&'
+=======
 SECRET_KEY = 'u@iccaym1=_j#=i624se51123drf'
+>>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -46,6 +50,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'flyxav',
     'authentication',
+<<<<<<< HEAD
+    'django_extensions',
+=======
+>>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9
 ]
 
 MIDDLEWARE = [
@@ -83,19 +91,34 @@ WSGI_APPLICATION = 'flyxavi.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 # DATABASES = {
+<<<<<<< HEAD
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+=======
 #      'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #      }
 #  }
+>>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
+<<<<<<< HEAD
+        'NAME':'postgres',
+        'USER': 'postgres',
+        "PASSWORD": '8yw4w786',
+        "HOST": 'localhost',
+=======
         'NAME':'d9h26vi8n8j36t',
         'USER': 'ruuyvlplmrdbit',
         "PASSWORD": 'f994b136549dec772904fcd886b2235649a289750c17e7dfd18d9873ecaf4642',
         "HOST": 'ec2-34-232-252-124.compute-1.amazonaws.com',
+>>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9
         "PORT": '5432',
     }
 }
