@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 from typing import ContextManager
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .models import Profile,Passport
-=======
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
->>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9
 
 def home(request):
     return render(request, 'home.html', {})
@@ -14,7 +9,6 @@ def home(request):
 
 @login_required
 def dashboard(request):
-<<<<<<< HEAD
     if request.method == 'POST':
          print(request.POST)
          data = request.POST
@@ -50,6 +44,3 @@ def hr_dashboard(request):
         'passport':passport
     }
     return render(request, 'hr_dashboard.html', Context)
-=======
-    return render(request, 'dashboard.html', {})
->>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9

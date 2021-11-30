@@ -1,7 +1,6 @@
 from django.db import models
 
 # Create your models here.
-<<<<<<< HEAD
 
 class Profile(models.Model):
     first_name = models.CharField(max_length=20, null=True)
@@ -22,5 +21,3 @@ class Passport(models.Model):
 
     
    
-=======
->>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9

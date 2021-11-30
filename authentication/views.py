@@ -44,11 +44,8 @@ def send_activation_email(user, request):
     if not settings.TESTING:
         EmailThread(email).start()
 
-<<<<<<< HEAD
 def invoice_user(request):
     return render(request, 'invoice.html', {})
-=======
->>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9
 
 #@auth_user_should_not_access
 def register(request):
@@ -56,12 +53,9 @@ def register(request):
         context = {'has_error': False, 'data': request.POST}
         email = request.POST.get('email')
         username = request.POST.get('username')
-<<<<<<< HEAD
         
         
         mobile = request.POST.get('phone')
-=======
->>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9
         password = request.POST.get('password')
         password2 = request.POST.get('password2')
         resume = request.POST.get('resume')
@@ -102,11 +96,7 @@ def register(request):
         if context['has_error']:
             return render(request, 'authentication/register.html', context)
 
-<<<<<<< HEAD
         user = User.objects.create_user(username=username, email=email, mobile=mobile,  resume=resume)
-=======
-        user = User.objects.create_user(username=username, email=email, resume=resume)
->>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9
         user.set_password(password)
         user.save()
 
@@ -150,7 +140,6 @@ def login_user(request):
 
     return render(request, 'authentication/login.html')
 
-<<<<<<< HEAD
 def hrlogin_user(request):
 
     if request.method == 'POST':
@@ -179,8 +168,6 @@ def hrlogin_user(request):
 
     return render(request, 'authentication/hrlogin.html')
 
-=======
->>>>>>> a0fa894c9ed4657b4f6c7d8dd1c6430de1fac0e9
 
 def logout_user(request):
 
