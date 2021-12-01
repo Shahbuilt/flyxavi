@@ -1,6 +1,9 @@
 from django.contrib import admin
 from .models import User
 
+admin.site.site_header = "Flyxavi Admin"
+admin.site.index_title = "Welcome Flyxavi"
+admin.site.site_title = "Flyxavi"
 
 class UserAdmin(admin.ModelAdmin):
 

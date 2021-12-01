@@ -34,7 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="/dashboard" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -414,10 +414,58 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <input type="text" name="location[address]" placeholder="Street Address">
                   </div>
                   <div class="four wide field">
-                    <input type="text" name="location[address-2]" placeholder="Apt #">
+                    <input type="text" name="location[address-2]" placeholder="Address line 2">
+                  </div>
+                  <div class="four wide field">
+                    <input type="text" name="location[pincode]" placeholder="pincode">
                   </div>
                 </div>
               </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Camo engineer</label>
+              </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Records Inspector</label>
+              </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Physical Inspector</label>
+              </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Project Management</label>
+              </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Aircraft Licenced Engineer</label>
+              </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Planning Engineer</label>
+              </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Technical Records Engineer</label>
+              </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Aviation Technical Consultant</label>
+              </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Airworthiness Management</label>
+              </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Powerplant Engineer</label>
+              </div>
+              <div class="ui checkbox">
+                <input type="checkbox" name="example">
+                <label>Quality Engineer</label>
+              </div>
+              
               <div class="field">
                 <div class="ui checkbox">
                   <input type="checkbox" tabindex="0" class="hidden">
@@ -426,7 +474,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </div>
               <button class="ui button" type="submit">Submit</button>
             </form>
-            <form action="{% url 'passportsuccess' %}" method='POST' id="passport">
+            <form action="{% url 'passportsuccess' %}" method='POST' id="passport" style="display: none;">
               <h1 class="m-0">Passport Details</h1>
               {% csrf_token %}
               <div class="field">
@@ -440,21 +488,58 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <button class="ui button" type="submit">Submit</button>
 
             </form>
-            <form action="" id="bank-details">
-              <h1 class="m-0">Bank Details Details</h1>
+
+            <form action="{% url 'bankdetailsuccess' %}" method='POST' id="bank-details" style="display: none;" >
+   
+            
+              <h1 class="m-0">Bank Details</h1>
               {% csrf_token %}
               <div class="field">
-                <label>Passport Number</label>
-                <input type="text" name="first-name" placeholder="Passport NO">
+                <label>Beneficiary Name</label>
+                <input type="text" name="beneficiary_name" placeholder="Beneficiary Name">
               </div>
               <div class="field">
-                <label>Last Name</label>
-                <input type="text" name="last-name" placeholder="Last Name">
+                <label>Beneficiary Address</label>
+                <input type="text" name="beneficiary_address" placeholder="Beneficiary Address">
               </div>
               <div class="field">
-                <label>Profile Pic</label>
-                <input type="file" name="picture" placeholder="Picture">
+                <label>Beneficiary Country</label>
+                <input type="text" name="beneficiary_country" placeholder="Beneficiary Country">
               </div>
+              <div class="field">
+                <label>Beneficiary Bank Name</label>
+                <input type="text" name="beneficiary_bank" placeholder="Beneficiary Bank Name">
+              </div>
+              <div class="field">
+                <label>Beneficiary A/c Number</label>
+                <input type="text" name="beneficiary_acnumber" placeholder="Beneficiary A/c Number">
+              </div>
+              <div class="field">
+                <label>Beneficiary Bank Address</label>
+                <input type="text" name="beneficiary_baddress" placeholder="Beneficiary Bank Address">
+              </div>
+              <div class="field">
+                <label>Beneficiary Bank  SWIFT Code</label>
+                <input type="text" name="beneficiary_swiftcode" placeholder="Beneficiary Bank  SWIFT Code">
+              </div>
+              <div class="field">
+                <label>Beneficiary Bank IBAN</label>
+                <input type="text" name="beneficiary_iban" placeholder="Beneficiary Bank IBAN">
+              </div>
+              <div class="field">
+                <label>Beneficiary Bank Sort Code</label>
+                <input type="text" name="beneficiary_sortcode" placeholder="Beneficiary Bank Sort Code">
+              </div>
+              <div class="field">
+                <label>Beneficiary Bank BSB</label>
+                <input type="text" name="beneficiary_bsb" placeholder="Beneficiary Bank BSB">
+              </div>
+              
+              <div class="field">
+                <label>Bank Details</label>
+                <input type="file" name="bank_details" placeholder="Bank Details">
+              </div>
+              <button class="ui button" type="submit">Submit</button>
 
             </form>
   </div>
@@ -501,7 +586,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script>  
   $(document).ready(function(){
 
-    $("#location").hide();
+    $("#location").show();
     $("#passport").hide();
     $("#bank-details").hide();
       $('#documentselector').on('change', function() {
@@ -513,6 +598,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         else
         {
           $("#location").hide();
+          
          
         }
       });
