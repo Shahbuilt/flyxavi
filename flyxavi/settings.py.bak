@@ -140,7 +140,7 @@ TESTING = len(sys.argv) > 1 and sys.argv[1] == 'test'
 EMAIL_FROM_USER = 'drsonukhan58@gmail.com'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'drsonukhan58@gmail.com'
-EMAIL_HOST_PASSWORD = '8yw4w786@'
+EMAIL_HOST_PASSWORD = '8yw4w786'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 
